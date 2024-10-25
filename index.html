@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimento Verde - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8f0;
+            color: #333;
+        }
+        header {
+            background-color: #228B22;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #006400;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        .banner {
+            background-image: url('caminho-do-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            border-radius: 10px;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #228B22;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .button:hover {
+            background-color: #006400;
+        }
+        footer {
+            background-color: #228B22;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 20px auto;
+        }
+        .news-card, .petition-card, .help-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .card-title {
+            color: #228B22;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Movimento Verde</h1>
+        <p>Unindo forças para um futuro sustentável</p>
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="assinados.html">Abaixo-Assinados</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+    <main>
+        <section class="banner">
+            <h2>Junte-se ao Movimento Verde</h2>
+            <p>Faça parte de nossas campanhas e ajude a proteger o meio ambiente.</p>
+            <a href="#signatures" class="button">Saiba Mais</a>
+        </section>
+        <section id="news" class="section">
+            <div class="news-card">
+                <h3 class="card-title">Últimas Notícias</h3>
+                <p>Fique por dentro das últimas atualizações sobre o meio ambiente e nossas campanhas.</p>
+            </div>
+        </section>
+        <section id="signatures" class="section">
+            <div class="petition-card">
+                <h3 class="card-title">Colabore com o nosso primeiro Abaixo-Assinados</h3>
+                <p>Ajude-nos a promover mudanças importantes assinando nossas petições. Cada assinatura conta!</p>
+                <a href="assinados.html" class="button">Assinar Agora</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Movimento Verde. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
