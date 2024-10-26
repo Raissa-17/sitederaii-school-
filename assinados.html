@@ -11,6 +11,9 @@
             padding: 0;
             background-color: #f0f8f0;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
             background-color: #228B22;
@@ -33,10 +36,12 @@
             text-decoration: underline;
         }
         main {
+            flex: 1;
             padding: 20px;
         }
         .section {
             margin: 20px 0;
+            text-align: center;
         }
         .button {
             display: inline-block;
@@ -45,7 +50,6 @@
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            text-align: center;
         }
         .button:hover {
             background-color: #006400;
@@ -55,9 +59,8 @@
             color: white;
             text-align: center;
             padding: 10px;
-            position: absolute;
-            bottom: 0;
             width: 100%;
+            position: relative;
         }
         img {
             max-width: 100%;
@@ -73,6 +76,7 @@
             margin: 10px 0;
             border: 1px solid #ddd;
             border-radius: 5px;
+            text-align: center;
         }
     </style>
 </head>
@@ -92,10 +96,13 @@
             <h2>Juntos contra a poluição</h2>
             <img src="caminho-da-imagem.png" alt="Imagem sobre poluição">
             <p>Ajude-nos a combater a poluição assinando nossa petição. Cada assinatura é um passo para um ambiente mais limpo e saudável.</p>
-            <a href="https://forms.gle/link-do-formulario" class="button">Assinar Agora</a>
+            <a href="https://forms.gle/link-do-formulario" class="button" target="_blank">Assinar Agora</a>
             <p>Assinaturas até agora:</p>
             <input type="text" class="input-text" value="1000" readonly>
         </section>
     </main>
+    <footer>
+        <p>© 2024 Movimento Verde. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
