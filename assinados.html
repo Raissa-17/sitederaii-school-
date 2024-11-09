@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movimento Verde - Abaixo-Assinados</title>
+    <title>Abaixo-Assinados - Movimento Verde</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,98 +11,98 @@
             padding: 0;
             background-color: #f0f8f0;
             color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        header {
-            background-color: #228B22;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #006400;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            text-decoration: underline;
         }
         main {
-            flex: 1;
             padding: 20px;
         }
-        .section {
-            margin: 20px 0;
-            text-align: center;
+        .petition-list {
+            margin-top: 20px;
         }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #228B22;
-            color: white;
-            text-decoration: none;
+        .petition {
+            border: 1px solid #ccc;
+            padding: 15px;
             border-radius: 5px;
+            margin-bottom: 15px;
         }
-        .button:hover {
-            background-color: #006400;
+        .petition-title {
+            font-size: 18px;
+            font-weight: bold;
         }
-        footer {
-            background-color: #228B22;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            width: 100%;
-            position: relative;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        .logo {
-            display: block;
-            margin: 0 auto 20px auto;
-        }
-        .input-text {
-            width: 100%;
-            padding: 10px;
+        .petition-desc {
             margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            text-align: center;
+        }
+        .form-section {
+            margin-top: 20px;
+        }
+        .form-section input, .form-section button {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Movimento Verde</h1>
-        <p>Unindo forças para um futuro sustentável</p>
-    </header>
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="noticias.html">Notícias</a>
-        <a href="assinados.html">Abaixo-Assinados</a>
-        <a href="contato.html">Contato</a>
-    </nav>
     <main>
-        <section id="signatures" class="section">
-            <h2>Juntos contra a poluição</h2>
-            <img src="caminho-da-imagem.png" alt="Imagem sobre poluição">
-            <p>Ajude-nos a combater a poluição assinando nossa petição. Cada assinatura é um passo para um ambiente mais limpo e saudável.</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDlxOhszvdjo7hLM-vR0x1k7ZVccHKjA3VHlO7gzvxJzQ0eQ/viewform?usp=sf_link" class="button" target="_blank">Assinar Agora</a>
-            <p>Assinaturas até agora:</p>
-            <input type="text" class="input-text" value="1000" readonly>
+        <h1>Abaixo-Assinados</h1>
+        
+        <section class="petition-list">
+            <div class="petition">
+                <p class="petition-title">Salve a Floresta Amazônica</p>
+                <p class="petition-desc">Participe deste abaixo-assinado para proteger a floresta amazônica e suas comunidades locais.</p>
+                <button onclick="showForm('Salve a Floresta Amazônica')">Assinar</button>
+            </div>
+            <div class="petition">
+                <p class="petition-title">Proteção dos Oceanos</p>
+                <p class="petition-desc">Ajude a promover políticas para a proteção das águas e da vida marinha.</p>
+                <button onclick="showForm('Proteção dos Oceanos')">Assinar</button>
+            </div>
+        </section>
+
+        <section class="form-section" id="formSection" style="display:none;">
+            <h3>Assine o abaixo-assinado</h3>
+            <p id="selectedPetition"></p>
+            <input type="text" id="name" placeholder="Seu nome">
+            <input type="email" id="email" placeholder="Seu e-mail">
+            <button onclick="submitSignature()">Enviar</button>
+        </section>
+
+        <section id="signaturesList" style="display:none;">
+            <h3>Assinaturas</h3>
+            <ul id="signatures"></ul>
         </section>
     </main>
-    <footer>
-        <p>© 2024 Movimento Verde. Todos os direitos reservados.</p>
-    </footer>
+
+    <script>
+        function showForm(petitionTitle) {
+            document.getElementById('formSection').style.display = 'block';
+            document.getElementById('selectedPetition').innerText = `Assinando: ${petitionTitle}`;
+        }
+
+        function submitSignature() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            if (name && email) {
+                const signatures = JSON.parse(localStorage.getItem('signatures')) || [];
+                signatures.push({ name, email });
+                localStorage.setItem('signatures', JSON.stringify(signatures));
+                displaySignatures();
+            }
+        }
+
+        function displaySignatures() {
+            const signatures = JSON.parse(localStorage.getItem('signatures')) || [];
+            const signaturesList = document.getElementById('signatures');
+            signaturesList.innerHTML = '';
+
+            signatures.forEach(signature => {
+                const listItem = document.createElement('li');
+                listItem.innerText = `${signature.name} (${signature.email})`;
+                signaturesList.appendChild(listItem);
+            });
+
+            document.getElementById('signaturesList').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
