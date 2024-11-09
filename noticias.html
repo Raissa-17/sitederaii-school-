@@ -35,47 +35,6 @@
         main {
             padding: 20px;
         }
-        section {
-            margin: 20px 0;
-        }
-
-               /* Estilo da Seção de Notícias */
-        #noticias {
-            padding: 2rem;
-            text-align: center;
-        }
-
-        h2 {
-            color: #2e7d32;
-            margin-bottom: 1rem;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-        }
-
-        .news-card {
-            background-color: white;
-            border: 2px solid #a5d6a7;
-            border-radius: 5px;
-            padding: 1rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .news-card h3 {
-            color: #2e7d32;
-        }
-
-        .news-card p {
-            margin: 0.5rem 0;
-        }
-
-        .credits {
-            font-size: 0.9rem;
-            color: #757575;
-        }
         .separator {
             height: 2px;
             background-color: #006400;
@@ -94,8 +53,31 @@
             max-width: 100%;
             height: auto;
         }
-
-  
+        /* Estilos da seção de notícias */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .news-item {
+            background-color: white;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .news-item h3 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        .news-item p {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .news-item .source {
+            font-size: 12px;
+            color: #555;
+        }
     </style>
 </head>
 <body>
@@ -109,43 +91,75 @@
         <a href="assinados.html">Abaixo-Assinados</a>
         <a href="contato.html">Contato</a>
     </nav>
-
-    <!-- Seção de Notícias -->
     <main>
-    <section id="noticias">
-        <h2>Últimas Notícias</h2>
-        <div class="grid-container">
-                <div class="news-card">
-                <h3>Título da Notícia 1</h3>
-                <p>Conteúdo da notícia 1...</p>
-                <p class="credits">Fonte: Exemplo.com</p>
+        <section>
+            <h2>Últimas Notícias</h2>
+            <div class="news-grid">
+                <!-- Notícia 1 -->
+                <div class="news-item">
+                    <img src="furacao-milton.png" alt="Furacão Milton">
+                    <h3>Furacão Milton nos Estados Unidos</h3>
+                    <p>O furacão Milton atingiu a Flórida, causando enchentes e tornados.</p>
+                    <p class="source">Fonte: <a href="https://www.metropoles.com">Metropoles</a></p>
+                </div>
+                <!-- Notícia 2 -->
+                <div class="news-item">
+                    <img src="br319jpg.webp" alt="Asfaltamento BR-319">
+                    <h3>Asfaltamento da BR-319</h3>
+                    <p>Justiça volta a autorizar licença para asfaltamento, gerando debates ambientais.</p>
+                    <p class="source">Fonte: <a href="https://www.msn.com">MSN</a></p>
+                </div>
+                <!-- Notícia 3 -->
+                <div class="news-item">
+                    <img src="imagem-noticia-3.jpg" alt="Imagem da notícia 3">
+                    <h3>Título da Notícia 3</h3>
+                    <p>Sinopse breve da notícia 3 com detalhes relevantes.</p>
+                    <p class="source">Fonte: <a href="#">Fonte Exemplo</a></p>
+                </div>
+                <!-- Notícia 4 -->
+                <div class="news-item">
+                    <img src="imagem-noticia-4.jpg" alt="Imagem da notícia 4">
+                    <h3>Título da Notícia 4</h3>
+                    <p>Sinopse breve da notícia 4 com detalhes relevantes.</p>
+                    <p class="source">Fonte: <a href="#">Fonte Exemplo</a></p>
+                </div>
+                <!-- Notícia 5 -->
+                <div class="news-item">
+                    <img src="imagem-noticia-5.jpg" alt="Imagem da notícia 5">
+                    <h3>Título da Notícia 5</h3>
+                    <p>Sinopse breve da notícia 5 com detalhes relevantes.</p>
+                    <p class="source">Fonte: <a href="#">Fonte Exemplo</a></p>
+                </div>
+                <!-- Notícia 6 -->
+                <div class="news-item">
+                    <img src="imagem-noticia-6.jpg" alt="Imagem da notícia 6">
+                    <h3>Título da Notícia 6</h3>
+                    <p>Sinopse breve da notícia 6 com detalhes relevantes.</p>
+                    <p class="source">Fonte: <a href="#">Fonte Exemplo</a></p>
+                </div>
+                <!-- Notícia 7 -->
+                <div class="news-item">
+                    <img src="imagem-noticia-7.jpg" alt="Imagem da notícia 7">
+                    <h3>Título da Notícia 7</h3>
+                    <p>Sinopse breve da notícia 7 com detalhes relevantes.</p>
+                    <p class="source">Fonte: <a href="#">Fonte Exemplo</a></p>
+                </div>
+                <!-- Notícia 8 -->
+                <div class="news-item">
+                    <img src="imagem-noticia-8.jpg" alt="Imagem da notícia 8">
+                    <h3>Título da Notícia 8</h3>
+                    <p>Sinopse breve da notícia 8 com detalhes relevantes.</p>
+                    <p class="source">Fonte: <a href="#">Fonte Exemplo</a></p>
+                </div>
+                <!-- Notícia 9 -->
+                <div class="news-item">
+                    <img src="imagem-noticia-9.jpg" alt="Imagem da notícia 9">
+                    <h3>Título da Notícia 9</h3>
+                    <p>Sinopse breve da notícia 9 com detalhes relevantes.</p>
+                    <p class="source">Fonte: <a href="#">Fonte Exemplo</a></p>
+                </div>
             </div>
-            <div class="news-card">
-                <h3>Título da Notícia 2</h3>
-                <p>Conteúdo da notícia 2...</p>
-                <p class="credits">Fonte: Exemplo.com</p>
-            </div>
-            <div class="news-card">
-                <h3>Título da Notícia 3</h3>
-                <p>Conteúdo da notícia 3...</p>
-                <p class="credits">Fonte: Exemplo.com</p>
-            </div>
-            <div class="news-card">
-                <h3>Título da Notícia 4</h3>
-                <p>Conteúdo da notícia 4...</p>
-                <p class="credits">Fonte: Exemplo.com</p>
-            </div>
-            <div class="news-card">
-                <h3>Título da Notícia 5</h3>
-                <p>Conteúdo da notícia 5...</p>
-                <p class="credits">Fonte: Exemplo.com</p>
-            </div>
-            <div class="news-card">
-                <h3>Título da Notícia 6</h3>
-                <p>Conteúdo da notícia 6...</p>
-                <p class="credits">Fonte: Exemplo.com</p>
-            </div>
-        </div>
+        </section>
     </main>
 </body>
 </html>
