@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abaixo-Assinados - Movimento Verde</title>
+    <title>Movimento Verde - Abaixo-Assinados</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,97 +12,131 @@
             background-color: #f0f8f0;
             color: #333;
         }
+        header {
+            background-color: #228B22;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #006400;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
         main {
             padding: 20px;
         }
-        .petition-list {
+        /* Estilo do grid 2x2 */
+        .petition-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+            gap: 30px; /* Espaçamento entre os grids */
             margin-top: 20px;
         }
-        .petition {
-            border: 1px solid #ccc;
-            padding: 15px;
+        .petition-item {
+            background-color: #d4edda; /* Cor verde suave de fundo */
+            border: 2px solid #28a745; /* Borda verde escura */
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            height: 280px; /* Ajuste para que os grids não fiquem muito pequenos */
+        }
+        .petition-item h3 {
+            margin-bottom: 10px;
+        }
+        .petition-item p {
+            margin-bottom: 10px;
+        }
+        .petition-item input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
             border-radius: 5px;
-            margin-bottom: 15px;
+            text-align: center;
         }
-        .petition-title {
-            font-size: 18px;
-            font-weight: bold;
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #228B22;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
         }
-        .petition-desc {
-            margin: 10px 0;
+        .button:hover {
+            background-color: #006400;
         }
-        .form-section {
-            margin-top: 20px;
-        }
-        .form-section input, .form-section button {
-            display: block;
-            margin: 10px 0;
-            padding: 8px;
+        footer {
+            background-color: #228B22;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Movimento Verde</h1>
+        <p>Unindo forças para um futuro sustentável</p>
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="assinados.html">Abaixo-Assinados</a>
+        <a href="contato.html">Contato</a>
+    </nav>
     <main>
-        <h1>Abaixo-Assinados</h1>
-        
-        <section class="petition-list">
-            <div class="petition">
-                <p class="petition-title">Salve a Floresta Amazônica</p>
-                <p class="petition-desc">Participe deste abaixo-assinado para proteger a floresta amazônica e suas comunidades locais.</p>
-                <button onclick="showForm('Salve a Floresta Amazônica')">Assinar</button>
+        <section class="petition-grid">
+            <!-- Grid 1 -->
+            <div class="petition-item">
+                <h3>Salve a Floresta Amazônica</h3>
+                <p>Participe deste abaixo-assinado para proteger a floresta amazônica e suas comunidades locais.</p>
+                <a href="https://forms.gle/link-do-formulario" class="button">Assinar Agora</a>
+                <p>Assinaturas até agora:</p>
+                <input type="text" value="1500" readonly>
             </div>
-            <div class="petition">
-                <p class="petition-title">Proteção dos Oceanos</p>
-                <p class="petition-desc">Ajude a promover políticas para a proteção das águas e da vida marinha.</p>
-                <button onclick="showForm('Proteção dos Oceanos')">Assinar</button>
+            <!-- Grid 2 -->
+            <div class="petition-item">
+                <h3>Proteção dos Oceanos</h3>
+                <p>Ajude a promover políticas para a proteção das águas e da vida marinha.</p>
+                <a href="https://forms.gle/link-do-formulario" class="button">Assinar Agora</a>
+                <p>Assinaturas até agora:</p>
+                <input type="text" value="2000" readonly>
             </div>
-        </section>
-
-        <section class="form-section" id="formSection" style="display:none;">
-            <h3>Assine o abaixo-assinado</h3>
-            <p id="selectedPetition"></p>
-            <input type="text" id="name" placeholder="Seu nome">
-            <input type="email" id="email" placeholder="Seu e-mail">
-            <button onclick="submitSignature()">Enviar</button>
-        </section>
-
-        <section id="signaturesList" style="display:none;">
-            <h3>Assinaturas</h3>
-            <ul id="signatures"></ul>
+            <!-- Grid 3 -->
+            <div class="petition-item">
+                <h3>Redução da Emissão de Carbono</h3>
+                <p>Junte-se a nós para reduzir as emissões de gases poluentes e proteger o nosso futuro.</p>
+                <a href="https://forms.gle/link-do-formulario" class="button">Assinar Agora</a>
+                <p>Assinaturas até agora:</p>
+                <input type="text" value="1800" readonly>
+            </div>
+            <!-- Grid 4 -->
+            <div class="petition-item">
+                <h3>Proteger a Biodiversidade</h3>
+                <p>A biodiversidade está em risco, participe do movimento para sua preservação.</p>
+                <a href="https://forms.gle/link-do-formulario" class="button">Assinar Agora</a>
+                <p>Assinaturas até agora:</p>
+                <input type="text" value="2200" readonly>
+            </div>
         </section>
     </main>
-
-    <script>
-        function showForm(petitionTitle) {
-            document.getElementById('formSection').style.display = 'block';
-            document.getElementById('selectedPetition').innerText = `Assinando: ${petitionTitle}`;
-        }
-
-        function submitSignature() {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-
-            if (name && email) {
-                const signatures = JSON.parse(localStorage.getItem('signatures')) || [];
-                signatures.push({ name, email });
-                localStorage.setItem('signatures', JSON.stringify(signatures));
-                displaySignatures();
-            }
-        }
-
-        function displaySignatures() {
-            const signatures = JSON.parse(localStorage.getItem('signatures')) || [];
-            const signaturesList = document.getElementById('signatures');
-            signaturesList.innerHTML = '';
-
-            signatures.forEach(signature => {
-                const listItem = document.createElement('li');
-                listItem.innerText = `${signature.name} (${signature.email})`;
-                signaturesList.appendChild(listItem);
-            });
-
-            document.getElementById('signaturesList').style.display = 'block';
-        }
-    </script>
+    <footer>
+        <p>&copy; 2024 Movimento Verde. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
