@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site com Notícias</title>
+    <title>Movimento Verde</title>
     <style>
         /* Estilos Gerais */
         * {
@@ -18,22 +18,36 @@
             color: #333;
         }
 
-        /* Estilo do Menu de Navegação */
+        /* Título do Site */
         header {
             background-color: #2e7d32;
-            padding: 1rem;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Estilo do Menu de Navegação */
+        nav {
+            background-color: #388e3c;
         }
 
         .menu {
             list-style: none;
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
+            padding: 0.5rem 0;
         }
 
         .menu li a {
             color: white;
             text-decoration: none;
             font-weight: bold;
+            margin: 0 1.5rem;
         }
 
         .menu li a:hover {
@@ -89,17 +103,20 @@
     </style>
 </head>
 <body>
-    <!-- Menu de navegação -->
+    <!-- Título do Site -->
     <header>
-        <nav>
-            <ul class="menu">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#noticias">Notícias</a></li>
-                <li><a href="#abaixo-assinados">Abaixo-assinados</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+        <h1>Movimento Verde</h1>
     </header>
+
+    <!-- Menu de navegação -->
+    <nav>
+        <ul class="menu">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#noticias">Notícias</a></li>
+            <li><a href="#abaixo-assinados">Abaixo-assinados</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
 
     <!-- Seção de Notícias -->
     <section id="noticias">
@@ -140,7 +157,7 @@
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2024 Meu Site de Notícias. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Movimento Verde. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
